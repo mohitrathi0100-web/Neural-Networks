@@ -1,0 +1,31 @@
+Implements Hopfield network to store patterns and recall stored memory using weighted associative neural network connections.
+import numpy as np
+
+# Patterns
+patterns = np.array([
+    [1, -1, 1],
+    [-1, 1, -1]
+])
+
+# Weight matrix
+W = np.zeros((3,3))
+
+for p in patterns:
+    W += np.outer(p, p)
+
+np.fill_diagonal(W, 0)
+
+print("Weight Matrix:\n", W)
+
+# Recall
+test = np.array([1, -1, 1])
+
+output = np.sign(W @ test)
+
+print("Recalled Pattern:", output)
+
+OUTPUT- Weight Matrix:
+ [[ 0. -2.  2.]
+ [-2.  0. -2.]
+ [ 2. -2.  0.]]
+Recalled Pattern: [ 1. -1.  1.]
