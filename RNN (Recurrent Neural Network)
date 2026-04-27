@@ -1,0 +1,20 @@
+Implements SimpleRNN layer to process sequential input data and capture time-dependent patterns in sequences.  
+import tensorflow as tf
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import SimpleRNN, Dense
+
+model = Sequential([
+    SimpleRNN(50, input_shape=(10,1)),
+    Dense(1)
+])
+
+model.compile(
+    optimizer='adam',
+    loss='mse'
+)
+
+print("RNN Model Created")
+
+OUTPUT- RNN Model Created
+/usr/local/lib/python3.12/dist-packages/keras/src/layers/rnn/rnn.py:199: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
