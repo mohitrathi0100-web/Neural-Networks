@@ -1,0 +1,22 @@
+Creates a DataFrame from dictionary data and calculates mean values using Pandas data analysis library.
+
+import pandas as pd
+
+data = {
+    "Name": ["Aman", "Ravi", "Priya"],
+    "Marks": [85, 90, 88]
+}
+
+df = pd.DataFrame(data)
+
+print("DataFrame:")
+print(df)
+
+print("Mean Marks:", df["Marks"].mean())
+
+OUTPUT-DataFrame:
+    Name  Marks
+0   Aman     85
+1   Ravi     90
+2  Priya     88
+Mean Marks: 87.66666666666667
