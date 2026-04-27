@@ -1,0 +1,17 @@
+Builds neural network model using Adam optimizer to minimize loss and improve learning performance during training iterations.
+import numpy as np
+
+# 1. Your original data (lists)
+X = [[0, 0], [0, 1], [1, 0], [1, 1]]
+y = [0, 1, 1, 0]
+
+# 2. Convert them to NumPy arrays (The Fix)
+X = np.array(X)
+y = np.array(y)
+
+# 3. Now the model will accept them
+model.fit(X, y, epochs=100, verbose=0)
+
+print("Training Complete")
+
+OUTPUT - Training Complete
