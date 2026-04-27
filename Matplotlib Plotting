@@ -1,0 +1,14 @@
+Plots a simple quadratic graph using Matplotlib to visualize relationship between input values and output values.
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.linspace(0, 10, 100)
+y = x**2
+
+plt.plot(x, y)
+plt.title("Simple Plot")
+plt.xlabel("X-axis")
+plt.ylabel("Y-axis")
+plt.show() 
+
+OUTPUT-      
