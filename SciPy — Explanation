@@ -1,0 +1,13 @@
+Uses SciPy integration function to compute definite integral of a mathematical function within specified limits.
+from scipy import integrate
+
+# Define function
+def f(x):
+    return x**2
+
+# Integration
+result, error = integrate.quad(f, 0, 2)
+
+print("Integration Result:", result)
+
+OUTPUT-Integration Result: 2.666666666666667
