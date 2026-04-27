@@ -1,0 +1,16 @@
+Uses Multi-Layer Perceptron to solve XOR problem, which cannot be solved using single-layer perceptron model.
+from sklearn.neural_network import MLPClassifier
+
+X = [[0,0],[0,1],[1,0],[1,1]]
+y = [0,1,1,0]
+
+model = MLPClassifier(hidden_layer_sizes=(2,), max_iter=1000)
+model.fit(X, y)
+
+print("XOR Predictions:")
+print(model.predict(X))
+
+OUTPUT - XOR Predictions:
+[0 1 1 1]
+/usr/local/lib/python3.12/dist-packages/sklearn/neural_network/_multilayer_perceptron.py:691: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (1000) reached and the optimization hasn't converged yet.
+  warnings.warn(
